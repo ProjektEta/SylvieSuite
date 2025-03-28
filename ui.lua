@@ -1,5 +1,3 @@
-local Lexer = loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjektEta/SDA-Pro/refs/heads/main/Lexer.lua"))()
-
 local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local Topbar = Instance.new("Frame")
@@ -121,7 +119,7 @@ TextBox.Font = Enum.Font.Highway
 TextBox.MultiLine = true
 TextBox.RichText = true
 TextBox.AutomaticSize = Enum.AutomaticSize.XY
-TextBox.Text = Lexer.run("print(\"Love eta\")")
+TextBox.Text = "print(\"Love eta\")"
 TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 20.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
@@ -218,8 +216,6 @@ end
 
 while task.wait(1) do
     local s,e = pcall(function()
-        TextBox.Text = Lexer.run(TextBox.Text);
-
         for _,v in pairs(ScrollingFrame:GetChildren()) do
             if v:IsA("TextLabel") then
                 v:Destroy()
