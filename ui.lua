@@ -1,4 +1,4 @@
-local Lexer = loadstring(game:HttpGet("https://github.com/ProjektEta/SDA-Pro/blob/main/Lexer.lua"))()
+local Lexer = loadstring(game:HttpGet("https://raw.githubusercontent.com/ProjektEta/SDA-Pro/refs/heads/main/Lexer.lua"))()
 
 local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
