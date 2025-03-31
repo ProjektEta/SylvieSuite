@@ -1,4 +1,4 @@
-		local AllowedMethods = lookupify{ "__index", "__namecall", "__newindex", "__call", "__concat", "__unm", "__add", "__sub", "__mul", "__div", "__pow", "__mod", "__tostring", "__eq", "__lt", "__le", "__gc", "__len" }
+		local AllowedMethods = { "__index", "__namecall", "__newindex", "__call", "__concat", "__unm", "__add", "__sub", "__mul", "__div", "__pow", "__mod", "__tostring", "__eq", "__lt", "__le", "__gc", "__len" }
 		getgenv().hookmetamethod = newcclosure(function(ud, method, fn)
 			assert(ud ~= nil, 'invalid argument #1 (object expected)', 0)
 			assert(typeof(method) == "string", 'invalid argument #2 (string expected)', 0)
